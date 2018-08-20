@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
+body {
+  color: #444;
+  background: $color-offwhite;
+  @include font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-header;
+  line-height: 1.26;
+  position: relative;
+}
+h1 {
+  font-size: 2.027rem;
+}
+h2 {
+  font-size: 1.802rem;
+}
+h3 {
+  font-size: 1.602rem
+}
+h4 {
+  font-size: 1.424rem;
+}
+h5 {
+  font-size: 1.266rem;
+}
+h6 {
+  font-size: 1.125rem;
+}
+
+p {
+  @include font-body;
+  margin-bottom: 1rem;
+  line-height: 1.66;
+  color: #666;
+}
+
+hr {
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  margin-bottom: 1rem;
+
+  &:after {
+    display: block;
+    content: "...";
+    color: #d7d7d7;
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+    padding: 0;
+    line-height: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+// Classes
+.datetime {
+  color: #cdcdcd;
+  font-size: 0.8rem;
+}
+.post-title {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}

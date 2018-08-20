@@ -1,0 +1,38 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  border: 1px solid #d7d7d7;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  transition: all 0.15s ease-in-out;
+  border-radius: 3px;
+  &:focus {
+    outline: 0;
+    border: 1px solid $color-dkblue;
+  }
+}
+textarea {
+  min-height: 980px;
+}
+label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+form {
+  width: 65vw;
+}
+
+.btn {
+  background: $color-dkblue;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: initial;
+  border: 0;
+  padding: 10px 20px;
+}

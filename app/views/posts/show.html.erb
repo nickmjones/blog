@@ -1,0 +1,10 @@
+<article class="post">
+  <h1>
+    <%= @post.title %>
+    <% if user_signed_in? %>
+      <%=link_to "Edit", edit_post_path %>
+    <% end %>
+  </h1>
+  <h6 class="datetime"><%= @post.created_at.stamp("Sunday, May 1, 2000") %></h6>
+  <%= markdown(@post.body) %>
+</article>

@@ -1,0 +1,77 @@
+.page {
+  padding: 4rem;
+
+  .post {
+    width: 40vw;
+    margin: 0 auto 4rem;
+  }
+}
+
+// Navigation
+// --------------------------
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid darken($color-offwhite, 10%);
+  border-bottom: 1px solid darken($color-offwhite, 10%);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: $color-offwhite;
+  z-index: 99;
+  height: $navigation-height;
+
+  &--masthead {
+    flex: 4;
+    align-self: flex-start;
+    color: $color-dkblue;
+    font-size: 1rem;
+    padding: 0.8rem;
+    font-family: 'Futura', Arial, Helvetica, sans-serif;
+    
+
+    h1 {
+      font-size: 0.8rem;
+      letter-spacing: 0.07rem;
+      text-transform: uppercase;
+    }
+
+    a {
+      text-decoration: none;
+      color: #888;
+    }
+  }
+  &--credits {
+    flex: 1;
+    align-self: flex-end;
+    border-left: 1px solid darken($color-offwhite, 10%);
+    padding: 0.8rem;
+    h3 {
+      font-size: 0.8rem;
+      letter-spacing: 0.07rem;
+      color: #888;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.head-matter {
+  padding: 1rem 0;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 80;
+  top: $navigation-height;
+  background: $color-offwhite;
+}
+
+footer {
+  background: darken($color-offwhite, 10%);
+  text-align: center;
+  margin-bottom: 0;
+  padding: 2rem 0;
+  p {
+    line-height: 0;
+    margin: 1.25rem;
+  }
+}
