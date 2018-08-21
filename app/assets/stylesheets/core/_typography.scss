@@ -65,10 +65,14 @@ hr {
 
 // Classes
 .datetime {
-  color: #cdcdcd;
+  color: transparentize(#444, 0.6);
   font-size: 0.8rem;
 }
 .post-title {
   font-weight: 400;
   margin-bottom: 1rem;
+  a {
+    color: #444;
+    text-decoration: none;
+  }
 }

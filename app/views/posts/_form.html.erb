@@ -1,5 +1,8 @@
 <%=simple_form_for @post do |f| %>
   <%= f.input :title %>
+  <%= f.input :city, placeholder: "Default is Washington, DC" %>
+  <%= f.input :tag_list, label: 'Tags (separated by commas)' %>
   <%= f.input :body %>
-  <%= f.button :submit, 'Save', class: 'btn' %>
+  <%= f.input :is_draft, label: 'Mark as draft?' %>
+  <%= f.button :submit, label: 'Save', class: 'btn' %>
 <% end %>

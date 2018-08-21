@@ -1,10 +1,21 @@
+<% title @post.title %>
+
 <article class="post">
-  <h1>
-    <%= @post.title %>
-    <% if user_signed_in? %>
-      <%=link_to "Edit", edit_post_path %>
-    <% end %>
-  </h1>
-  <h6 class="datetime"><%= @post.created_at.stamp("Sunday, May 1, 2000") %></h6>
+
+  <header class="head-matter">
+    <h1 class="post-title">
+      <%= @post.title %>
+    </h1>
+    <h6 class="datetime">
+      <%= @post.created_at.stamp("Sunday, May 1, 2000") %> &mdash; <%= @post.city %>
+    </h6>
+  </header>
+
   <%= markdown(@post.body) %>
+
+  <div class="tags">
+    <%= raw(@post.tag_list.map { |t| link_to t, tag_path(t) }.join(' ')) %>
+  </div>
+    
+
 </article>

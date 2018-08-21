@@ -17,6 +17,8 @@ gem 'friendly_id', '~> 5.2.0'
 gem 'devise'
 gem 'kaminari'
 gem 'stamp'
+gem 'font-awesome-rails'
+gem 'acts-as-taggable-on', :git => 'https://github.com/mbleigh/acts-as-taggable-on'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

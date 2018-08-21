@@ -3,7 +3,11 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
   def index
-    @posts = Post.all.order('created_at DESC').page params[:page]
+    if params[:tag]
+      @posts = Post.is_published.tagged_with(params[:tag]).order('created_at DESC').page params[:page]
+    else
+      @posts = Post.is_published.order('created_at DESC').page params[:page]
+    end
   end
 
   def show
@@ -19,26 +23,33 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to @post, notice: "Post created."
     else
       render 'new'
     end
   end
 
-
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to @post, notice: "Post updated."
     else
       render 'edit'
     end
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @post.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: "Post deleted."
+  end
+
+  def drafts
+    @drafts = Post.is_draft.order('created_at DESC').page params[:page]
+  end
+
+  def sent
+    @sents = Post.is_published.order('created_at DESC').page params[:page]
   end
 
   private
@@ -48,7 +59,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :slug)
+      params.require(:post).permit(:title, :body, :is_draft, :slug, :tag_list)
     end
   
 end

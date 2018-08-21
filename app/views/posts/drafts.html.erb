@@ -1,0 +1,27 @@
+<% title "Drafts" %>
+
+<%= render 'shared/segmented-control' %>
+
+<table>
+  <thead>
+    <tr>
+      <th width="75%">Post Title</th>
+      <th>Date Created</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for draft in @drafts %>
+      <tr>
+        <td><%=link_to draft.title, edit_post_path(draft) %></td>
+        <td><%=draft.created_at.stamp("March 1, 1999") %>
+        <td>
+          <%=link_to "rm", post_path(draft), method: :delete, data: { confirm: 'Really delete this post?'} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+      
+
+<%= paginate @drafts %>

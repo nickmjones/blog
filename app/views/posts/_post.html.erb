@@ -1,11 +1,13 @@
+<% title post.title %>
+
 <article class="post">
 
   <header class="head-matter">
     <h1 class="post-title">
-      <%= post.title %>
+      <%= link_to post.title, post %>
     </h1>
     <h6 class="datetime">
-      <%= post.created_at.stamp("Sunday, May 1, 2000") %>
+      <%= post.created_at.stamp("Sunday, May 1, 2000") %> &mdash; <%= post.city %>
     </h6>
   </header>
 

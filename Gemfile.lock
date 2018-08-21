@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/mbleigh/acts-as-taggable-on
+  revision: 69322267029b54fe42be9a05e248df9de289a65b
+  specs:
+    acts-as-taggable-on (6.0.1)
+      activerecord (~> 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -83,6 +90,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     friendly_id (5.2.4)
       activerecord (>= 4.0.0)
     globalid (0.4.1)
@@ -224,12 +233,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on!
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  font-awesome-rails
   friendly_id (~> 5.2.0)
   jbuilder (~> 2.5)
   kaminari
