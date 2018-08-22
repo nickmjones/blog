@@ -19,6 +19,7 @@ gem 'kaminari'
 gem 'stamp'
 gem 'font-awesome-rails'
 gem 'acts-as-taggable-on', :git => 'https://github.com/mbleigh/acts-as-taggable-on'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

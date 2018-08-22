@@ -24,6 +24,9 @@
   .links {
     flex: 2;
     padding-top: 7.5rem;
+    &.index {
+      padding-top: 0;
+    }
   }
   .links ul {
     list-style-type: none;
@@ -51,6 +54,7 @@
   .timestamp {
     color: darken($color-offwhite, 25%);
     font-size: 0.8rem;
+    margin-top: 0.5rem;
   }
 }
 
