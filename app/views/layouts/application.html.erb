@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:title) ? yield(:title) : '' %> | Journalistic Intent</title>
+    <title><%= if content_for?(:title) then yield(:title) + ' | ' end %>Journalistic Intent</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

@@ -20,8 +20,8 @@ module ApplicationHelper
     markdown.render(text).html_safe
   end
 
-  def title(page_title)
-    content_for(:title) { page_title }
+  def title(text)
+    content_for :title, text
   end
   
   def relative_time(time)
