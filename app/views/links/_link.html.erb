@@ -1,0 +1,10 @@
+<li>
+  <%= link.body.html_safe %>
+  <% if link.attribution? %>
+    <span class="attribution"> <%= link.attribution %></span>
+  <% end %>
+  <div class="timestamp"> <%= relative_time(link.created_at) %> ago</div>
+  <% if user_signed_in? %>
+    <%=link_to "Delete", link_path(link), method: :delete, data: { confirm: 'Really delete this link?'} %>
+  <% end %>
+</li>

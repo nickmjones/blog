@@ -7,10 +7,17 @@
       <%= link_to post.title, post %>
     </h1>
     <h6 class="datetime">
-      <%= post.city %> </br>
-      <%= post.created_at.stamp("Sunday, May 1, 2000") %> 
+      <h6 class="datetime">
+      <%= post.created_at.stamp("Sunday, May 1, 2000 at 9:00 AM") %> &mdash; <%= post.city %>
     </h6>
   </header>
+
+  <!-- post media but only if it exists -->
+  <% if post.media %>
+    <div class="media">
+      <%= post.media.html_safe %>
+    </div>
+  <% end %>
 
   <%= markdown(post.body) %>
   

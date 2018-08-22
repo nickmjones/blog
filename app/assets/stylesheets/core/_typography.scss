@@ -88,9 +88,17 @@ hr {
 .small {
   font-size: 0.8rem;
 }
+
+// css basics
+
 em {
   font-style: italic;
 }
 strong {
   font-weight: bold;
+}
+blockquote {
+  padding-left: 1rem;
+  border-left: 1px solid darken($color-offwhite, 25%);
+  font-style: italic;
 }
