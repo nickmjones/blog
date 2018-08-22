@@ -1,0 +1,20 @@
+<% title "Linked" %>
+
+<div class="links">
+  <h5 class="is-upcase">Linked</h5>
+    <p class="small has-bottom-margin">Almost too small to mention</p>
+    <ul>
+      <% for link in @links %>
+        <li>
+          <%= link.body.html_safe %>
+          <% if link.attribution? %>
+            <span class="attribution"> <%= link.attribution %></span>
+          <% end %>
+          <div class="timestamp"> <%= relative_time(link.created_at) %> ago</div>
+        </li>
+      <% end %>
+    </ul>
+</div>
+
+
+<%= paginate @links %>

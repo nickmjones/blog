@@ -47,7 +47,7 @@ hr {
   height: 2rem;
   padding: 0;
   border: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
 
   &:after {
     display: block;
@@ -75,4 +75,16 @@ hr {
     color: #444;
     text-decoration: none;
   }
+}
+.is-upcase {
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.07rem;
+}
+.has-bottom-margin {
+  margin-bottom: 1rem;
+}
+.small {
+  font-size: 0.8rem;
 }

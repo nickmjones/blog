@@ -24,4 +24,7 @@ module ApplicationHelper
     content_for(:title) { page_title }
   end
   
+  def relative_time(time)
+    return distance_of_time_in_words(time, Time.now)
+  end
 end

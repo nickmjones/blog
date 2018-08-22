@@ -1,6 +1,6 @@
 <% title @post.title %>
 
-<article class="post">
+<article class="post__inside">
 
   <header class="head-matter">
     <h1 class="post-title">
@@ -16,6 +16,5 @@
   <div class="tags">
     <%= raw(@post.tag_list.map { |t| link_to t, tag_path(t) }.join(' ')) %>
   </div>
-    
 
 </article>

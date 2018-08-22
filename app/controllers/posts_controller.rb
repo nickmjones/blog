@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
   def index
+    @links = Link.all.order('created_at DESC').limit(9)
     if params[:tag]
       @posts = Post.is_published.tagged_with(params[:tag]).order('created_at DESC').page params[:page]
     else

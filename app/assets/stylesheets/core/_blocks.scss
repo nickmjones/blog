@@ -1,14 +1,56 @@
 .page {
   padding: 3.6rem;
+  display: flex;
+  width: 80vw;
   @include for-phone-only {
     padding: 2rem;
   }
 
-  .post {
+  .posts {
+    flex: 3;
+    padding-right: 2rem;
+    @include for-phone-only {
+      width: 100%;
+    }
+  }
+
+  .post__inside {
     width: 55vw;
     @include for-phone-only {
       width: 100%;
     }
+  }
+
+  .links {
+    flex: 2;
+    padding-top: 7.5rem;
+  }
+  .links ul {
+    list-style-type: none;
+  }
+  .links ul li {
+    line-height: 1.46;
+    @include font-header;
+    font-weighT: 200;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+    a {
+      color: $color-dkblue;
+      text-decoration: none;
+    }
+  }
+   .links h5 {
+     color: darken($color-offwhite, 35%);
+   }
+
+  .attribution {
+    color: $color-orange;
+  }
+
+  .timestamp {
+    color: darken($color-offwhite, 25%);
+    font-size: 0.8rem;
   }
 }
 
